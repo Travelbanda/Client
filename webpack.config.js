@@ -128,7 +128,7 @@ function buildFactory(entry, i = '00') {
 					minimize: true,
 					debug: false,
 					options: {
-						publicPath,
+						output: {},
 						context: __dirname
 					}
 				})
