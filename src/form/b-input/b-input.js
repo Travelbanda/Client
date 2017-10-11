@@ -105,6 +105,11 @@ export default class bInput extends iInput {
 	mask: ?string;
 
 	/**
+	 * Readonly field
+	 */
+	readonly: ?boolean;
+
+	/**
 	 * Mask placeholder
 	 */
 	@watch('updateMask', {immediate: true})
@@ -444,7 +449,7 @@ export default class bInput extends iInput {
 		const
 			{input} = this.$refs;
 
-		if (input.hasAttribute('readonly')) {
+		if (input.hasAttribute('readonly') && !this.readonly) {
 			input.removeAttribute('readonly');
 
 			if (this.b.is.iOS) {
