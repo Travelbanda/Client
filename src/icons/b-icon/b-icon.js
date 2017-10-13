@@ -66,7 +66,7 @@ export default class bIcon extends iFunctional {
 				el('use', {
 					class: [`${b}__link`],
 					attrs: {
-						'xlink:href': `${location.pathname + location.search}#${icons(icon).id}`
+						'xlink:href': `#${icons(icon).id}`
 					}
 				})
 			])
