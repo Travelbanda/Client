@@ -45,13 +45,6 @@ export default class bIcon extends iFunctional {
 	 */
 	hintPos: string = 'bottom';
 
-	/**
-	 * Returns full path to icon
-	 */
-	get fullPath(): string {
-		return location.pathname + location.search;
-	}
-
 	/** @override */
 	render(el: Function, ctx?: Object, attrs?: Object, children?: Array): Object {
 		attrs = attrs || {};
@@ -59,7 +52,8 @@ export default class bIcon extends iFunctional {
 		const
 			p = ctx.props,
 			b = p.componentName,
-			icon = `./${(p.prfx + p.value).replace(/&/g, '_and_').underscore()}.svg`;
+			icon = `./${(p.prfx + p.value).replace(/&/g, '_and_').underscore()}.svg`,
+			fullPath = p.path !== undefined ? p.path : location.pathname + location.search;
 
 		if (!p.value || icon in iconsMap === false) {
 			return;
@@ -73,7 +67,7 @@ export default class bIcon extends iFunctional {
 				el('use', {
 					class: [`${b}__link`],
 					attrs: {
-						'xlink:href': `${p.fullPath}#${icons(icon).id}`
+						'xlink:href': `${fullPath}#${icons(icon).id}`
 					}
 				})
 			])
