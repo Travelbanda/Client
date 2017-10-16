@@ -12,7 +12,7 @@ import { rootComponents } from 'core/component';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const
-		nodes = document.queryAll('[data-init-block]');
+		nodes = document.querySelectorAll('[data-init-block]');
 
 	for (let i = 0; i < nodes.length; i++) {
 		const

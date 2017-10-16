@@ -220,7 +220,7 @@ export default class Block {
 	 * @param [mods]
 	 */
 	elements(elName: string, mods?: Object): Array<Element> {
-		return this.node.queryAll(this.getElSelector(elName, mods));
+		return this.node.querySelectorAll(this.getElSelector(elName, mods));
 	}
 
 	/**

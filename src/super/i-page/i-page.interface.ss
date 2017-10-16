@@ -206,7 +206,7 @@
 						['collection.js/dist/collection.min.js'],
 						['sugar/dist/sugar.min.js'],
 						'requestidlecallback/index.js',
-						'dom4/build/dom4.js',
+						'dom4/build/dom4.max.js',
 						'sugar/dist/locales/ru.js',
 						'eventemitter2/lib/eventemitter2.js',
 						'localforage/dist/localforage.min.js',

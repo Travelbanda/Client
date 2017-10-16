@@ -106,8 +106,8 @@ export default class bForm extends iData {
 	get submits(): Array<bButton> {
 		return this.waitState('ready', () => $C(
 			this.$el
-				.queryAll('button[type="submit"]')
-				.concat(this.id ? document.queryAll(`button[type="submit"][form="${this.id}"]`) : [])
+				.querySelectorAll('button[type="submit"]')
+				.concat(this.id ? document.querySelectorAll(`button[type="submit"][form="${this.id}"]`) : [])
 
 		).map((el) => this.$(el)));
 	}

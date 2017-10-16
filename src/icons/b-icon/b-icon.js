@@ -45,6 +45,13 @@ export default class bIcon extends iFunctional {
 	 */
 	hintPos: string = 'bottom';
 
+	/**
+	 * Returns full path to icon
+	 */
+	get fullPath(): string {
+		return location.pathname + location.search;
+	}
+
 	/** @override */
 	render(el: Function, ctx?: Object, attrs?: Object, children?: Array): Object {
 		attrs = attrs || {};
@@ -66,7 +73,7 @@ export default class bIcon extends iFunctional {
 				el('use', {
 					class: [`${b}__link`],
 					attrs: {
-						'xlink:href': `#${icons(icon).id}`
+						'xlink:href': `${p.fullPath}#${icons(icon).id}`
 					}
 				})
 			])
