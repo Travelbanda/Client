@@ -41,7 +41,7 @@ export default class JWT extends Provider {
 			} catch (_) {}
 		}
 
-		req.then(update);
+		req.then(update).catch(() => {});
 		return Object.assign(req.catch((err) => {
 			const
 				res = err.args[0];

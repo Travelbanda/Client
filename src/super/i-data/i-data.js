@@ -388,7 +388,7 @@ export default class iData extends iMessage {
 
 			req.then(then, (err) => {
 				then();
-				throw err;
+				//throw err;
 			});
 		}
 
