@@ -25,6 +25,11 @@ export default class bCheckboxGroup extends iInput {
 	blockConverter: ?Function;
 
 	/**
+	 * Determines, whether it is necessary hints on the checkboxes
+	 */
+	hints: ?boolean;
+
+	/**
 	 * Checkbox selection method
 	 */
 	multiple: boolean = true;

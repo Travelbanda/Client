@@ -44,6 +44,8 @@
 						< template v-else
 							< component.&__checkbox &
 								:instanceOf = bCheckbox |
+								:-hint = hints && (el.hint || el.label) |
+								:class = setHint(el.hintPos || 'top') |
 								:is = option |
 								:p = el |
 								@change = onChange |
