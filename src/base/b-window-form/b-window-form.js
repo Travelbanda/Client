@@ -90,9 +90,6 @@ export default class bWindowForm extends bWindow {
 		return m;
 	}
 
-	/** @override */
-	initDataListeners() {}
-
 	/**
 	 * Clears the block form
 	 * @emits clear()
