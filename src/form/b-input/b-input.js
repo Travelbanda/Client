@@ -498,6 +498,16 @@ export default class bInput extends iInput {
 	}
 
 	/**
+	 * Handler: paste
+	 * @param e
+	 */
+	async onPaste(e: InputEvent) {
+		await this.async.sleep(50);
+		this.onEdit(e);
+		e.preventDefault();
+	}
+
+	/**
 	 * Handler: mask focus
 	 * @param e
 	 */

@@ -43,6 +43,7 @@
 								:maxlength = maxlength |
 								:readonly = autocomplete === 'off' ? 'readonly' : undefined |
 								@focus = onFocus |
+								@paste = onPaste |
 								@input = onEdit |
 								@blur = onBlur |
 								${attrs|!html}
