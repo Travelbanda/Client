@@ -45,6 +45,11 @@ export default class bIcon extends iFunctional {
 	 */
 	hintPos: string = 'bottom';
 
+	/**
+	 * Path to icon
+	 */
+	path: ?string;
+
 	/** @override */
 	render(el: Function, ctx?: Object, attrs?: Object, children?: Array): Object {
 		attrs = attrs || {};
