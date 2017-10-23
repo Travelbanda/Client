@@ -20,7 +20,7 @@
 			:type = 'submit' |
 			:form = getConnectedId('form') |
 			:preIcon = 'save' |
-			:mods = provideMods({theme: 'light', rounding: 'small', size: gt[mods.size]})
+			:mods = provideMods({theme: 'dark', rounding: 'small', size: gt[mods.size]})
 		.
 			{{ stage === 'new' ? `Add` : `Save` }}
 

@@ -36,7 +36,7 @@
 						+= self.slot('control')
 							- block controls
 								< b-button &
-									:mods = provideMods({theme: 'dark', size: gt[mods.size]}) |
+									:mods = provideMods({theme: 'light', size: gt[mods.size]}) |
 									@click = close
 								.
 									{{ `Close` }}
