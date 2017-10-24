@@ -220,9 +220,9 @@ export default class Block {
 	 * @param [mods]
 	 */
 	elements(elName: string, mods?: Object): Array<Element> {
-		return this.node.querySelectorAll(this.getElSelector(elName, mods));
+		return Array.create(this.node.querySelectorAll(this.getElSelector(elName, mods)));
 	}
-
+	
 	/**
 	 * Returns a child element by the specified request
 	 *
