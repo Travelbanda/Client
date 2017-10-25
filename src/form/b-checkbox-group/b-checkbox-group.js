@@ -76,8 +76,8 @@ export default class bCheckboxGroup extends iInput {
 						els = await this.elements;
 
 					if (els.length) {
-						els[0].error = msg || t`Required field`;
-						els[0].setMod('valid', false);
+						this.error = msg || t`Required field`;
+						this.setMod('valid', false);
 					}
 				}
 
