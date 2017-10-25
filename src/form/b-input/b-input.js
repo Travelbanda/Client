@@ -486,25 +486,18 @@ export default class bInput extends iInput {
 	}
 
 	/**
-	 * Handler: edit
+	 * Handler: edit. Waits model changing add emit actionChange
 	 *
 	 * @param e
 	 * @emits actionChange(value: string)
 	 */
 	async onEdit(e: InputEvent) {
 		if (!this.mask && this.blockValueField === 'value') {
-			this.emit('actionChange', this.value);
+			this.async.once(this.localEvent, 'model.changed', {
+				label: $$.modelChanged,
+				fn: () => this.emit('actionChange', this.value)
+			});
 		}
-	}
-
-	/**
-	 * Handler: paste
-	 * @param e
-	 */
-	async onPaste(e: InputEvent) {
-		await this.async.sleep(50);
-		this.onEdit(e);
-		e.preventDefault();
 	}
 
 	/**

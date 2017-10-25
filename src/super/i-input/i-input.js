@@ -232,6 +232,13 @@ export default class iInput extends iData {
 		})();
 	}
 
+	/**
+	 * Value store sync event
+	 */
+	$$valueStore() {
+		this.localEvent.emit('model.changed');
+	}
+
 	/** @override */
 	initRemoteData(): ?any {
 		if (!this.db) {
