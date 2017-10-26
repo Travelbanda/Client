@@ -85,7 +85,7 @@ export default class iDynamicPage extends iData {
 	 * Initialized the block state from hash values
 	 */
 	initStateFromHash() {
-		this.setState(Object.fromQueryString(new URI().fragment(), {deep: true}));
+		this.setState(Object.fromQueryString(new URI().fragment(), {deep: true, auto: false}));
 	}
 
 	/**
