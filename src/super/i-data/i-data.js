@@ -375,22 +375,20 @@ export default class iData extends iMessage {
 			}
 		);
 
-		if (this.mods.progress !== 'true') {
-			if (params.showProgress !== false) {
-				this.setMod('progress', true);
-			}
-
-			const then = () => {
-				if (params.stopProgress !== false) {
-					this.setMod('progress', false);
-				}
-			};
-
-			req.then(then, (err) => {
-				then();
-				//throw err;
-			});
+		if (params.showProgress !== false) {
+			this.setMod('progress', true);
 		}
+
+		const then = () => {
+			if (params.stopProgress !== false) {
+				this.setMod('progress', false);
+			}
+		};
+
+		req.then(then, (err) => {
+			then();
+			//throw err;
+		});
 
 		return req;
 	}
